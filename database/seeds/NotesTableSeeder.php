@@ -2,15 +2,15 @@
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class NotesTableSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Seed notes table.
      *
      * @return void
      */
     public function run()
     {
-        $this->call(NotesTableSeeder::class);
+        factory(App\Note::class, 10)->create();
     }
 }
